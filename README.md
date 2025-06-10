@@ -20,6 +20,7 @@ Ce depot rassemble plusieurs projets et scripts Python varies. Vous y trouverez 
 - **scraping** – Scripts de web scraping illustrant l'utilisation de `BeautifulSoup`, `requests` ou encore `urllib`.
 - **scripting** – Divers exemples de scripts (envoi d'emails, manipulation de fichiers, etc.).
 - **youtube downloader** – Programme de telechargement de videos Youtube a l'aide de `pytube` et `ffmpeg`.
+- **peb** – Package de calcul simplifie de performance energetique du batiment ([voir la documentation](peb/README.md)).
 
 De nombreux fichiers annexes (PDF, images, base de donnees, etc.) se trouvent aussi a la racine ou dans certains dossiers.
 
