@@ -15,6 +15,7 @@ Ce depot rassemble plusieurs projets et scripts Python varies. Vous y trouverez 
 - **Python Research** – Divers scripts d'analyse de donnees : regression logistique, random forests, reseaux, etc.
 - **Questionnaire** – Implementation orientee objet d'un petit questionnaire interactif.
 - **Thermo** – Exercices de thermodynamique (methode d'Euler, capacites thermiques…).
+- **IsolationThermique** – Calculs simplifiés de déperdition thermique (U*A, ponts thermiques…).
 - **api** – Quelques appels d'API simples, dont un exemple pour recuperer les pizzas du projet PizzaMama.
 - **kivy** – Mini-projet demontrant la creation d'une fenetre avec Kivy.
 - **scraping** – Scripts de web scraping illustrant l'utilisation de `BeautifulSoup`, `requests` ou encore `urllib`.
