@@ -14,6 +14,7 @@ from peb import (
 
 def main() -> None:
     building = Building(
+        floor_area=120,
         walls=[Wall(area=100, u_value=0.3)],
         windows=[Window(area=20, u_value=1.2)],
         heating=HeatingSystem(efficiency=0.9),

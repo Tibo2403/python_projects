@@ -31,6 +31,8 @@ class HeatingSystem:
 class Building:
     """Simplified building model."""
 
+    floor_area: float  # m^2 of conditioned floor area
+    infiltration_rate: float = 0.6  # air changes per hour
     walls: List[Wall] = field(default_factory=list)
     windows: List[Window] = field(default_factory=list)
     heating: HeatingSystem = field(
