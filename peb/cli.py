@@ -55,6 +55,31 @@ def _build_from_excel(path: str) -> Building:
     )
 
 
+def _build_from_csv(folder: str) -> Building:
+    """Build a Building instance from three CSV files located in *folder*."""
+    import os
+    import pandas as pd
+
+    df_build = pd.read_csv(os.path.join(folder, "building.csv"))
+    floor_area = float(df_build.loc[0, "floor_area"])
+    infiltration_rate = float(df_build.loc[0, "infiltration_rate"])
+    heating_eff = float(df_build.loc[0, "heating_efficiency"])
+
+    df_walls = pd.read_csv(os.path.join(folder, "walls.csv"))
+    walls = [Wall(area=row["area"], u_value=row["u_value"]) for _, row in df_walls.iterrows()]
+
+    df_windows = pd.read_csv(os.path.join(folder, "windows.csv"))
+    windows = [Window(area=row["area"], u_value=row["u_value"]) for _, row in df_windows.iterrows()]
+
+    return Building(
+        floor_area=floor_area,
+        infiltration_rate=infiltration_rate,
+        walls=walls,
+        windows=windows,
+        heating=HeatingSystem(efficiency=heating_eff),
+    )
+
+
 def _build_interactive() -> Building:
     floor_area = _prompt_float("Surface chauffée (m²) : ")
     infiltration = _prompt_float("Taux d'infiltration (1/h) : ")
@@ -72,9 +97,14 @@ def _build_interactive() -> Building:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Calcul de performance énergétique")
-    parser.add_argument(
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
         "--excel",
         help="Classeur Excel contenant les données du bâtiment",
+    )
+    group.add_argument(
+        "--csv",
+        help="Dossier contenant building.csv, walls.csv et windows.csv",
     )
     parser.add_argument(
         "--region",
@@ -86,6 +116,8 @@ def main() -> None:
 
     if args.excel:
         building = _build_from_excel(args.excel)
+    elif args.csv:
+        building = _build_from_csv(args.csv)
     else:
         building = _build_interactive()
 
