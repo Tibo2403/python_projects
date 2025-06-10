@@ -45,6 +45,17 @@ python fichier.py
 
 Certains projets (comme `PizzaMamaDjango`) sont des projets Django complets : il faudra donc appliquer la procedure classique (`python manage.py runserver`).
 
+## Utilisation du package `peb`
+
+Pour tester ce package de calcul PEB simplifie, vous pouvez executer le script d'exemple fourni et lancer la suite de tests :
+
+```bash
+python -m peb.examples.usage
+python -m unittest discover -v peb/tests
+```
+
+L'export au format PDF exige l'installation de la dependance `fpdf`.
+
 ## Licence
 
 Ce depot est fourni a titre d'exemple pedagogique et n'impose pas de licence particuliere. Vous etes libre de l'etudier et de l'adapter selon vos besoins.
