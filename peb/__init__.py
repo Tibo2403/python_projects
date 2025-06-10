@@ -7,6 +7,7 @@ from .calculations import (
     primary_energy,
     energy_score,
 )
+from . import cli
 try:
     from .export import export_certificate
 except Exception:  # pragma: no cover - optional dependency
@@ -22,4 +23,5 @@ __all__ = [
     "primary_energy",
     "energy_score",
     "export_certificate",
+    "cli",
 ]
