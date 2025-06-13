@@ -17,6 +17,7 @@ Ce depot rassemble plusieurs projets et scripts Python varies. Vous y trouverez 
 - **Thermo** – Exercices de thermodynamique (methode d'Euler, capacites thermiques…).
 - **api** – Quelques appels d'API simples, dont un exemple pour recuperer les pizzas du projet PizzaMama.
 - **kivy** – Mini-projet demontrant la creation d'une fenetre avec Kivy.
+- **MobilityMap** – Flask app affichant les comptages du trafic sur une carte Leaflet.
 - **scraping** – Scripts de web scraping illustrant l'utilisation de `BeautifulSoup`, `requests` ou encore `urllib`.
 - **scripting** – Divers exemples de scripts (envoi d'emails, manipulation de fichiers, etc.).
 - **youtube downloader** – Programme de telechargement de videos Youtube a l'aide de `pytube` et `ffmpeg`.

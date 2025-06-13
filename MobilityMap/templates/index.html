@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobility Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+      #map { height: 90vh; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Traffic Counts</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        const data = JSON.parse('{{ data|safe }}');
+        const map = L.map('map').setView([50.85, 4.35], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+        if (data.features) {
+            data.features.forEach(f => {
+                if (f.geometry && f.geometry.coordinates) {
+                    const [lon, lat] = f.geometry.coordinates;
+                    const counts = f.properties.counts || {};
+                    L.marker([lat, lon]).addTo(map)
+                        .bindPopup(`<b>${f.properties.name || ''}</b><br>` +
+                        `Cars: ${counts.vehicles || 'n/a'}<br>` +
+                        `Bikes: ${counts.bikes || 'n/a'}`);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
