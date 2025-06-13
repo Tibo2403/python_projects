@@ -8,7 +8,7 @@ Ce depot rassemble plusieurs projets et scripts Python varies. Vous y trouverez 
 - **Chatbot** – Quelques essais autour de la generation de reponses avec la bibliotheque `chatterbot` et des exemples de synthese ou reconnaissance vocale.
 - **Chimie** – Fonctions et petits programmes sur des notions chimiques (calcul de pH, configuration electronique…).
 - **Dashboard** – Exemple minimal d'utilisation de la bibliotheque `cuxfilter` pour creer un tableau de bord interactif.
-- **Design Patterns** – Illustrations de certains patrons de conception, par exemple le patron Composite.
+- **Design Patterns** – Illustrations de plusieurs patrons de conception : Composite, Singleton, Factory, Observer et Strategy. Voir [Design Patterns/README.md](Design Patterns/README.md) pour savoir quand et comment les utiliser.
 - **ETL** – Script de demonstration d'un processus Extract/Transform/Load (attention : dependances manquantes et noms de modules parfois incorrects).
 - **Ethical Hacking** – Exemple tres basique d'echanges reseau via sockets (client et serveur).
 - **PizzaMama** – Exemple d'application console consommant une API de pizzeria ; voir egalement le projet Django dans `PizzaMamaDjango`.
