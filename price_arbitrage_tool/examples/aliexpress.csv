@@ -1,0 +1,5 @@
+sku,title,price,shipping,url,stock,rating,brand,model,ean,variant,dimensions,weight_grams
+ALI-900,Support telephone magnetique universel pour voiture,4.20,1.10,https://aliexpress.example/item900,500,4.7,Generic,MG-01,3760000000012,noir,6x4x4 cm,78
+ALI-901,Humidificateur USB portable silencieux 300 ml,7.80,2.50,https://aliexpress.example/item901,230,4.6,Generic,HUM-300,3760000000029,blanc,7x7x14 cm,185
+ALI-902,Lampe de bureau LED pliable tactile rechargeable,9.90,3.20,https://aliexpress.example/item902,90,4.8,LumiDesk,LD-12,3760000000036,blanc,12x8x32 cm,430
+ALI-903,Tapis souris XXL gaming noir,5.50,2.20,https://aliexpress.example/item903,120,4.4,Generic,MP-XXL,3760000000043,noir,80x30 cm,315

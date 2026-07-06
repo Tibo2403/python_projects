@@ -1,0 +1,5 @@
+sku,title,price,shipping,url,stock,rating,brand,model,ean,variant,dimensions,weight_grams
+AMZ-001,Support telephone magnetique voiture universel,19.99,0,https://amazon.example/item1,42,4.4,Generic,MG-01,3760000000012,noir,6x4x4 cm,80
+AMZ-002,Mini humidificateur USB portable 300 ml silencieux,24.90,0,https://amazon.example/item2,18,4.1,Generic,HUM-300,3760000000029,blanc,7x7x14 cm,190
+AMZ-003,Lampe LED bureau pliable rechargeable tactile,29.99,0,https://amazon.example/item3,7,4.5,LumiDesk,LD-12,3760000000036,blanc,12x8x32 cm,420
+AMZ-004,Tapis souris gaming XXL noir antiderapant,14.99,0,https://amazon.example/item4,0,4.2,Generic,MP-XXL,3760000000043,noir,80x30 cm,310
