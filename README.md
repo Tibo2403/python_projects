@@ -1,5 +1,11 @@
 # Python Projects
 
+## Finance d'entreprise
+
+- [`corporate_finance_berk`](corporate_finance_berk/) : calculs pédagogiques en
+  Python pur couvrant les concepts quantitatifs des chapitres 4 à 18 de
+  *Corporate Finance* (Berk et DeMarzo), avec exemples et tests.
+
 Ce depot rassemble plusieurs projets et scripts Python varies. Vous y trouverez des exemples allant de la creation d'un chatbot a la generation d'un tableau de bord, en passant par l'analyse de donnees ou encore la programmation reseau. Les dossiers contiennent des projets independants qui peuvent etre explores separement.
 
 ## Structure du depot
