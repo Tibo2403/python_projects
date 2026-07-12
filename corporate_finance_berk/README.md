@@ -7,6 +7,17 @@ Ce projet n'est ni un corrigé officiel ni une reproduction des exercices. Les
 fonctions sont génériques et les exemples sont originaux. Utilisez les données
 de votre édition dans les fonctions correspondantes.
 
+## Démarrage rapide
+
+Depuis la racine du dépôt :
+
+```powershell
+python -m corporate_finance_berk.exemples
+```
+
+Consultez le **[guide d'utilisation détaillé](GUIDE_UTILISATION.md)** pour les
+conventions, le choix des fonctions et des exemples complets par chapitre.
+
 | Ch. | Thème | Méthodes |
 |---:|---|---|
 | 4 | Valeur temps | valeur présente/future, annuité, perpétuité |
@@ -28,7 +39,6 @@ de votre édition dans les fonctions correspondantes.
 Tous les taux sont décimaux (`0.08` = 8 %) et les flux commencent en date 0.
 
 ```powershell
-python -m corporate_finance_berk.exemples
 python -m unittest discover -s corporate_finance_berk/tests -v
 python -m compileall corporate_finance_berk
 ```
