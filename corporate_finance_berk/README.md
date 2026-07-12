@@ -17,24 +17,26 @@ python -m corporate_finance_berk.exemples
 
 Consultez le **[guide d'utilisation détaillé](GUIDE_UTILISATION.md)** pour les
 conventions, le choix des fonctions et des exemples complets par chapitre.
+La **[référence des calculs](REFERENCE_CALCULS.md)** indexe chaque méthode, ses
+paramètres et son résultat par chapitre.
 
 | Ch. | Thème | Méthodes |
 |---:|---|---|
-| 4 | Valeur temps | valeur présente/future, annuité, perpétuité |
+| 4 | Valeur temps | valeur présente/future, annuités, perpétuité, emprunts |
 | 5 | Taux | taux effectif, taux forward |
-| 6 | Obligations | prix, rendement à maturité |
-| 7 | Investissement | VAN, TRI, délai de récupération |
-| 8 | Budget d'investissement | flux opérationnel, FCF, annuité équivalente |
-| 9 | Actions | Gordon, valorisation multi-étapes |
-| 10 | Risque/rendement | espérance, variance |
-| 11 | Portefeuille/CAPM | rendement, variance, CAPM |
-| 12 | Coût du capital | bêta, WACC |
+| 6 | Obligations | prix, YTM, duration, convexité, intérêt couru |
+| 7 | Investissement | VAN, TRI, MIRR, récupération, profitabilité |
+| 8 | Budget d'investissement | flux incrémentaux, amortissement, seuil, FCF |
+| 9 | Actions | Gordon, multi-étapes, multiples, distribution totale |
+| 10 | Risque/rendement | espérance, variance, covariance, corrélation |
+| 11 | Portefeuille/CAPM | variance matricielle, Sharpe, CAPM |
+| 12 | Coût du capital | bêta désendetté/réendetté, WACC |
 | 13 | Efficience | rendement anormal, CAR |
-| 14 | Structure financière | levier, M&M II |
-| 15 | Dette/fiscalité | bouclier fiscal |
-| 16 | Difficultés financières | coût attendu de détresse |
-| 17 | Distribution | ex-dividende, rachats |
-| 18 | Valorisation avec levier | APV, FTE, WACC projet |
+| 14 | Structure financière | valeur MM, levier, levier fait maison |
+| 15 | Dette/fiscalité | boucliers ponctuels, permanents et programmés |
+| 16 | Difficultés financières | coûts directs/indirects, agence, compromis |
+| 17 | Distribution | ex-dividende, rachats, BPA, richesse |
+| 18 | Valorisation avec levier | APV, FTE, FCFF, FCFE, terminale, WACC |
 
 Tous les taux sont décimaux (`0.08` = 8 %) et les flux commencent en date 0.
 

@@ -3,6 +3,10 @@
 Ce guide explique comment lancer les exemples et utiliser les fonctions de
 `corporate_finance_berk` avec vos propres données.
 
+Pour rechercher une formule précise, utilisez la
+**[référence complète des calculs](REFERENCE_CALCULS.md)**, organisée par
+chapitre, fonction, paramètres et résultat.
+
 ## 1. Prérequis et lancement
 
 Le module fonctionne avec Python 3 et n'utilise aucune bibliothèque externe.
