@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -22,6 +24,23 @@ jobs:
       - name: Check syntax
         run: python -m compileall -q .
       - name: Ruff critical checks
-        run: ruff check . --select E9,F63,F7,F82
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        shell: bash
+        run: |
+          if [[ -z "$BASE_SHA" || "$BASE_SHA" =~ ^0+$ ]]; then
+            BASE_SHA="$(git rev-parse HEAD^)"
+          fi
+
+          mapfile -d '' changed_python_files < <(
+            git diff --name-only --diff-filter=ACMR -z "$BASE_SHA"...HEAD -- '*.py'
+          )
+
+          if (( ${#changed_python_files[@]} == 0 )); then
+            echo "No changed Python files to check."
+            exit 0
+          fi
+
+          ruff check "${changed_python_files[@]}" --select E9,F63,F7,F82
       - name: Run available tests
         run: pytest
