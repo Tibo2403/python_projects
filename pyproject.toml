@@ -18,6 +18,7 @@ ignore = ["E501"]
 [tool.pytest.ini_options]
 testpaths = ["tests", "corporate_finance_berk/tests"]
 python_files = ["test_*.py", "*_test.py"]
+pythonpath = ["."]
 addopts = ["-q"]
 
 [tool.coverage.run]
