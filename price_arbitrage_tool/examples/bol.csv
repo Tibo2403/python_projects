@@ -1,4 +1,0 @@
-sku,title,price,shipping,url,stock,rating,brand,model,ean,variant,dimensions,weight_grams
-BOL-001,Support telephone magnetique voiture universel,21.95,0,https://bol.example/item1,24,4.3,Generic,MG-01,3760000000012,noir,6x4x4 cm,80
-BOL-002,Mini humidificateur USB portable 300 ml silencieux,26.50,0,https://bol.example/item2,12,4.0,Generic,HUM-300,3760000000029,blanc,7x7x14 cm,190
-BOL-003,Lampe LED bureau pliable rechargeable tactile,31.99,0,https://bol.example/item3,8,4.4,LumiDesk,LD-12,3760000000036,blanc,12x8x32 cm,420

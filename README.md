@@ -1,63 +1,64 @@
 # Python Projects
 
-## Finance d'entreprise
+Collection d'exemples, d'exercices et de projets Python. Les applications qui
+ont leur propre cycle de publication vivent dans des dépôts autonomes afin
+d'éviter les copies divergentes.
 
-- [`corporate_finance_berk`](corporate_finance_berk/) : calculs pédagogiques en
-  Python pur couvrant les concepts quantitatifs des chapitres 4 à 18 de
-  *Corporate Finance* (Berk et DeMarzo), avec exemples, tests et
-  [guide d'utilisation](corporate_finance_berk/GUIDE_UTILISATION.md), ainsi
-  qu'une [référence des calculs](corporate_finance_berk/REFERENCE_CALCULS.md).
+## Projets structurés dans cette collection
 
-Ce depot rassemble plusieurs projets et scripts Python varies. Vous y trouverez des exemples allant de la creation d'un chatbot a la generation d'un tableau de bord, en passant par l'analyse de donnees ou encore la programmation reseau. Les dossiers contiennent des projets independants qui peuvent etre explores separement.
+| Projet | Domaine | Point d'entrée |
+| --- | --- | --- |
+| [`corporate_finance_berk`](corporate_finance_berk/) | Finance d'entreprise | [Guide d'utilisation](corporate_finance_berk/GUIDE_UTILISATION.md) |
+| [`peb`](peb/) | Performance énergétique du bâtiment | [Documentation](peb/README.md) |
+| [`MobilityMap`](MobilityMap/) | Visualisation de données de mobilité | Application Flask du dossier |
+| [`PizzaMama`](PizzaMama/) | Application console et API | Scripts du dossier |
+| [`PizzaMamaDjango`](PizzaMamaDjango/) | Application web Django | `manage.py` |
+| [`Design Patterns`](Design%20Patterns/) | Patrons de conception | [Documentation](Design%20Patterns/README.md) |
 
-## Structure du depot
+## Laboratoires pédagogiques
 
-- **Algorithme** – Scripts illustrant des algorithmes simples comme le tri par selection ou la manipulation de chaines de caracteres.
-- **Chatbot** – Quelques essais autour de la generation de reponses avec la bibliotheque `chatterbot` et des exemples de synthese ou reconnaissance vocale.
-- **Chimie** – Fonctions et petits programmes sur des notions chimiques (calcul de pH, configuration electronique…).
-- **Dashboard** – Exemple minimal d'utilisation de la bibliotheque `cuxfilter` pour creer un tableau de bord interactif.
-- **Design Patterns** – Illustrations de plusieurs patrons de conception : Composite, Singleton, Factory, Observer, Strategy ainsi que Decorator et Adapter. Voir [Design Patterns/README.md](Design Patterns/README.md) pour savoir quand et comment les utiliser.
-- **ETL** – Script de demonstration d'un processus Extract/Transform/Load (attention : dependances manquantes et noms de modules parfois incorrects).
-- **Ethical Hacking** – Exemple tres basique d'echanges reseau via sockets (client et serveur).
-- **PizzaMama** – Exemple d'application console consommant une API de pizzeria ; voir egalement le projet Django dans `PizzaMamaDjango`.
-- **Python Research** – Divers scripts d'analyse de donnees : regression logistique, random forests, reseaux, etc.
-- **Questionnaire** – Implementation orientee objet d'un petit questionnaire interactif.
-- **Thermo** – Exercices de thermodynamique (methode d'Euler, capacites thermiques…).
-- **api** – Quelques appels d'API simples, dont un exemple pour recuperer les pizzas du projet PizzaMama.
-- **kivy** – Mini-projet demontrant la creation d'une fenetre avec Kivy.
-- **MobilityMap** – Flask app affichant les comptages du trafic sur une carte Leaflet.
-- **agent_writer_essay** - Agent d'ecriture d'essais avec CLI et interface Gradio locale.
-- **github_project_agent** - Agent LangChain pour auditer et ameliorer des projets GitHub.
-- **price_arbitrage_tool** - Calculateur d'arbitrage marketplace a partir de donnees CSV autorisees.
-- **scraping** – Scripts de web scraping illustrant l'utilisation de `BeautifulSoup`, `requests` ou encore `urllib`.
-- **scripting** – Divers exemples de scripts (envoi d'emails, manipulation de fichiers, etc.).
-- **youtube downloader** – Programme de telechargement de videos Youtube a l'aide de `pytube` et `ffmpeg`.
-- **peb** – Package de calcul simplifie de performance energetique du batiment ([voir la documentation](peb/README.md)).
+- **Fondamentaux :** `Algorithme`, `Questionnaire`, `api`, `scripting`.
+- **Data et sciences :** `Python Research`, `Chimie`, `Thermo`, `Dashboard`.
+- **Interfaces et web :** `Chatbot`, `kivy`, `scraping`, `youtube downloader`.
+- **Architecture et réseau :** `ETL`, `Ethical Hacking`.
 
-De nombreux fichiers annexes (PDF, images, base de donnees, etc.) se trouvent aussi a la racine ou dans certains dossiers.
+Ces dossiers sont des supports d'apprentissage. Leurs dépendances et leur niveau
+de finition peuvent varier ; consultez le code du dossier avant exécution.
 
-## Pre-requis
+## Projets autonomes
 
-Certains projets necessitent des bibliotheques externes : `chatterbot`, `kivy`, `pytube`, `ffmpeg`, `pandas`, `scikit-learn`, etc. Pensez a creer un environnement virtuel et a installer les dependances necessaires avant d'executer un script particulier.
+Les projets suivants ont été extraits dans leur propre dépôt. Leur dépôt
+autonome est l'unique source de vérité :
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt  # fichier a creer selon vos besoins
+- [`agent_writer_essay`](https://github.com/Tibo2403/agent_writer_essay)
+- [`github_project_agent`](https://github.com/Tibo2403/github_project_agent)
+- [`price_arbitrage_tool`](https://github.com/Tibo2403/price_arbitrage_tool)
+
+## Conventions d'organisation
+
+- Un projet publié et maintenu indépendamment ne doit pas être recopié ici.
+- Les sorties générées (`opportunities*.csv`, caches, builds et environnements
+  virtuels) restent hors de Git.
+- Les fichiers à la racine sont de petits exercices ou leurs résultats
+  pédagogiques ; les nouvelles applications doivent être placées dans un dossier
+  nommé et documenté.
+- Chaque projet doit documenter son point d'entrée et ses dépendances localement.
+
+## Exécution
+
+Créez un environnement virtuel dans le dossier du projet concerné, puis
+installez ses dépendances :
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 ```
 
-## Execution
-
-Chaque dossier contient generalement un ou plusieurs fichiers `main.py` ou equivalents. Reportez-vous au code pour connaitre le point d'entree :
-
-```bash
-cd dossier
-python fichier.py
-```
-
-Certains projets (comme `PizzaMamaDjango`) sont des projets Django complets : il faudra donc appliquer la procedure classique (`python manage.py runserver`).
+Tous les projets ne possèdent pas encore un fichier `requirements.txt`.
+Reportez-vous au README ou aux imports du dossier sélectionné.
 
 ## Licence
 
-Ce depot est fourni a titre d'exemple pedagogique et n'impose pas de licence particuliere. Vous etes libre de l'etudier et de l'adapter selon vos besoins.
-
+Cette collection est fournie à des fins pédagogiques. Les projets disposant
+d'une licence propre l'indiquent dans leur dossier.
