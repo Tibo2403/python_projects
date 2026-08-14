@@ -1,8 +1,11 @@
 # Python Projects
 
-Collection d'exemples, d'exercices et de projets Python. Les applications qui
-ont leur propre cycle de publication vivent dans des dépôts autonomes afin
-d'éviter les copies divergentes.
+Collection pédagogique d'exemples, d'exercices et de projets Python.
+
+> **Maturité : expérimental / apprentissage.** Les dossiers peuvent servir de
+> démonstrations ou de points de départ, mais ne sont pas présentés comme des
+> applications prêtes pour la production. Le niveau de finition est documenté
+> au plus près de chaque projet lorsqu'il dispose de son propre README.
 
 ## Projets structurés dans cette collection
 
@@ -25,18 +28,18 @@ d'éviter les copies divergentes.
 Ces dossiers sont des supports d'apprentissage. Leurs dépendances et leur niveau
 de finition peuvent varier ; consultez le code du dossier avant exécution.
 
-## Projets autonomes
+## Expériences archivées
 
-Les projets suivants ont été extraits dans leur propre dépôt. Leur dépôt
-autonome est l'unique source de vérité :
-
-- [`agent_writer_essay`](https://github.com/Tibo2403/agent_writer_essay)
-- [`github_project_agent`](https://github.com/Tibo2403/github_project_agent)
-- [`price_arbitrage_tool`](https://github.com/Tibo2403/price_arbitrage_tool)
+Trois anciennes extractions (`agent_writer_essay`, `github_project_agent` et
+`price_arbitrage_tool`) ont été archivées. Elles ne font pas partie de cette
+collection et ne sont plus présentées comme des projets autonomes maintenus.
+Cette mention remplace les anciens liens publics, qui pointaient vers des
+dépôts privés et archivés.
 
 ## Conventions d'organisation
 
-- Un projet publié et maintenu indépendamment ne doit pas être recopié ici.
+- Le statut expérimental ou utilisable doit être indiqué dans le README du
+  projet concerné ; l'absence d'indication signifie expérimental.
 - Les sorties générées (`opportunities*.csv`, caches, builds et environnements
   virtuels) restent hors de Git.
 - Les fichiers à la racine sont de petits exercices ou leurs résultats
@@ -60,5 +63,6 @@ Reportez-vous au README ou aux imports du dossier sélectionné.
 
 ## Licence
 
-Cette collection est fournie à des fins pédagogiques. Les projets disposant
-d'une licence propre l'indiquent dans leur dossier.
+Sauf mention différente dans un sous-dossier, cette collection est distribuée
+sous licence MIT. Certains jeux de données, documents ou médias peuvent rester
+soumis à leurs propres conditions.
