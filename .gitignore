@@ -15,3 +15,8 @@ build/
 youtube downloader/*.mp4
 youtube downloader/audio/
 youtube downloader/video/
+
+# Secrets
+.env
+.env.*
+!.env.example
