@@ -5,10 +5,9 @@
 # https://codeavecjonathan.com/res/exemple.html
 
 import requests
-import json
 
 # API REST
-"""reponse = requests.get("https://codeavecjonathan.com/res/pizzas1.json")
+"""reponse = requests.get("https://codeavecjonathan.com/res/pizzas1.json", timeout=10)
 if reponse.status_code == 200:
     reponse.encoding = "utf-8"
     print(reponse.text)
@@ -17,7 +16,7 @@ if reponse.status_code == 200:
 else:
     print("ERREUR code : " + str(reponse.status_code))"""
 
-reponse = requests.get("https://codeavecjonathan.com/res/exemple.html")
+reponse = requests.get("https://codeavecjonathan.com/res/exemple.html", timeout=10)
 if reponse.status_code == 200:
     reponse.encoding = "utf-8"
     print(reponse.text)

@@ -1,4 +1,3 @@
-import pandas as pd
 from bs4 import BeautifulSoup as bs
 import urllib.request
 url='https://www.amazon.com/b?node=16225016011&pf_rd_r=8YTV1WEXADBMR34Q87RX&pf_rd_p=e5b0c85f-569c-4c90-a58f-0c0a260e45a0'

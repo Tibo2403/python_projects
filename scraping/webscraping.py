@@ -1,10 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
-import pandas
 
 url = 'http://example.webscraping.com'
 
-response = requests.get(url)
+response = requests.get(url, timeout=10)
 
 if response.ok:
     links = []

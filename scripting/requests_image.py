@@ -4,7 +4,7 @@
 
 import requests
 
-reponse = requests.get("https://codeavecjonathan.com/res/papillon.jpg")
+reponse = requests.get("https://codeavecjonathan.com/res/papillon.jpg", timeout=10)
 if reponse.status_code == 200:
     f = open("papillon.jpg", "wb")
     f.write(reponse.content)

@@ -43,4 +43,3 @@ def translate(seq):
             protein += table[codon]
     return protein
 
-import string

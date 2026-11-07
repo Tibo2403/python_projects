@@ -3,7 +3,7 @@ import json
 
 url = "https://jrpizzamamadjango2.herokuapp.com/api/GetPizzas"
 
-data = requests.get(url)
+data = requests.get(url, timeout=10)
 
 # print(data.text)
 
