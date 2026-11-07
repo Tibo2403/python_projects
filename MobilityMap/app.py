@@ -16,4 +16,6 @@ def index():
     return render_template("index.html", data=json.dumps(data))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+
+    app.run(debug=os.environ.get("FLASK_DEBUG") == "1")

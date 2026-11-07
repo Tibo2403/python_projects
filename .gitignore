@@ -20,3 +20,6 @@ youtube downloader/video/
 .env
 .env.*
 !.env.example
+
+# Django local DB
+*.sqlite3

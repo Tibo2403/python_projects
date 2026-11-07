@@ -49,8 +49,8 @@ plot_degree_distribution(G3)
 plt.savefig("hist3.pdf")
 
 import numpy as np
-A1 = np.loadtxt("C:\\Users\\User\Downloads\\adj_allVillageRelationships_vilno_1.csv",delimiter=",")
-A2 = np.loadtxt("C:\\Users\\User\Downloads\\adj_allVillageRelationships_vilno_2.csv",delimiter=",")
+A1 = np.loadtxt(r"C:\Users\User\Downloads\\adj_allVillageRelationships_vilno_1.csv",delimiter=",")
+A2 = np.loadtxt(r"C:\Users\User\Downloads\\adj_allVillageRelationships_vilno_2.csv",delimiter=",")
 
 G1 = nx.to_networkx_graph(A1)
 G2 = nx.to_networkx_graph(A2)
