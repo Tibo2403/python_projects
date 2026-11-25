@@ -83,6 +83,23 @@ def make_prediction_grid(predictors, outcomes, limits, h, k):
             prediction_grid[j,i] = knn_predict(p, predictors, outcomes, k)
 
     return (xx, yy, prediction_grid)
+def plot_prediction_grid(xx, yy, prediction_grid, filename):
+    """Plot KNN prediction grid and save it to filename."""
+    from matplotlib.colors import ListedColormap
+    background_colormap = ListedColormap(["hotpink", "lightskyblue", "yellowgreen"])
+    observation_colormap = ListedColormap(["red", "blue", "green"])
+    plt.figure(figsize=(10, 10))
+    plt.pcolormesh(xx, yy, prediction_grid, cmap=background_colormap, alpha=0.5, shading="auto")
+    plt.scatter(predictors[:, 0], predictors[:, 1], c=outcomes, cmap=observation_colormap, s=50)
+    plt.xlabel("Variable 1")
+    plt.ylabel("Variable 2")
+    plt.xticks(())
+    plt.yticks(())
+    plt.xlim(np.min(xx), np.max(xx))
+    plt.ylim(np.min(yy), np.max(yy))
+    plt.savefig(filename)
+
+
 seasons = ["spring","summer","fall","winter"]
 list(enumerate(seasons))
 (predictors, outcomes) = genereate_synth_data()

@@ -3,8 +3,6 @@
 # openpyxl
 import openpyxl
 import os
-import openpyxl
-import os
 
 #checks if path is a file
 fpath = "C:\\USers\\user\\Downloads\\excel\\"

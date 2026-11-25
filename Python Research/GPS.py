@@ -1,5 +1,4 @@
 import pandas as pd
-import pip
 
 birddata = pd.read_csv("C:\\Users\\user\\Desktop\\bird_tracking.csv")
 birddata.head()

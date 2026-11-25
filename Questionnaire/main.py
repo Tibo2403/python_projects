@@ -43,6 +43,7 @@ class Question:
         print()
         return resultat_response_correcte
 
+    @staticmethod
     def demander_reponse_numerique_utlisateur(min, max):
         reponse_str = input("Votre réponse (entre " + str(min) + " et " + str(max) + ") :")
         try:
@@ -51,9 +52,9 @@ class Question:
                 return reponse_int
 
             print("ERREUR : Vous devez rentrer un nombre entre", min, "et", max)
-        except:
+        except ValueError:
             print("ERREUR : Veuillez rentrer uniquement des chiffres")
-        return demander_reponse_numerique_utlisateur(min, max)
+        return Question.demander_reponse_numerique_utlisateur(min, max)
 
 
 '''
@@ -74,7 +75,7 @@ def poser_question(question):
 
     print()
     resultat_response_correcte = False
-    reponse_int = demander_reponse_numerique_utlisateur(1, len(choix))
+    reponse_int = Question.demander_reponse_numerique_utlisateur(1, len(choix))
     if choix[reponse_int - 1].lower() == bonne_reponse.lower():
         print("Bonne réponse")
         resultat_response_correcte = True

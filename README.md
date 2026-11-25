@@ -1,90 +1,72 @@
 # Python Projects
 
-Ce dépôt rassemble des projets Python indépendants à vocation pédagogique ou expérimentale. Chaque dossier doit être considéré comme un projet autonome : ses dépendances, son point d’entrée et son niveau de maintenance peuvent différer.
+Collection pédagogique d'exemples, d'exercices et de projets Python.
 
-## Projets principaux
+> **Maturité : expérimental / apprentissage.** Les dossiers peuvent servir de
+> démonstrations ou de points de départ, mais ne sont pas présentés comme des
+> applications prêtes pour la production. Le niveau de finition est documenté
+> au plus près de chaque projet lorsqu'il dispose de son propre README.
 
-### Finance d’entreprise
+## Projets structurés dans cette collection
 
-- [`corporate_finance_berk`](corporate_finance_berk/) : calculs pédagogiques en Python pur couvrant les concepts quantitatifs des chapitres 4 à 18 de *Corporate Finance* (Berk et DeMarzo), avec exemples, tests, [guide d’utilisation](corporate_finance_berk/GUIDE_UTILISATION.md) et [référence des calculs](corporate_finance_berk/REFERENCE_CALCULS.md).
+| Projet | Domaine | Point d'entrée |
+| --- | --- | --- |
+| [`corporate_finance_berk`](corporate_finance_berk/) | Finance d'entreprise | [Guide d'utilisation](corporate_finance_berk/GUIDE_UTILISATION.md) |
+| [`peb`](peb/) | Performance énergétique du bâtiment | [Documentation](peb/README.md) |
+| [`MobilityMap`](MobilityMap/) | Visualisation de données de mobilité | Application Flask du dossier |
+| [`PizzaMama`](PizzaMama/) | Application console et API | Scripts du dossier |
+| [`PizzaMamaDjango`](PizzaMamaDjango/) | Application web Django | `manage.py` |
+| [`Design Patterns`](Design%20Patterns/) | Patrons de conception | [Documentation](Design%20Patterns/README.md) |
 
-### Autres projets et exemples
+## Laboratoires pédagogiques
 
-- **Algorithme** — algorithmes simples et manipulation de chaînes.
-- **Chatbot** — essais autour de `chatterbot`, de la synthèse et de la reconnaissance vocale.
-- **Chimie** — calculs de pH, configuration électronique et autres exemples.
-- **Dashboard** — exemple minimal avec `cuxfilter`.
-- **Design Patterns** — Composite, Singleton, Factory, Observer, Strategy, Decorator et Adapter.
-- **ETL** — démonstration Extract/Transform/Load ; certaines dépendances doivent encore être normalisées.
-- **Ethical Hacking** — exemples réseau élémentaires avec sockets.
-- **PizzaMama** et **PizzaMamaDjango** — applications console et Django autour d’une API de pizzeria.
-- **Python Research** — scripts d’analyse de données et de machine learning.
-- **Questionnaire** — questionnaire interactif orienté objet.
-- **Thermo** — exercices de thermodynamique.
-- **api** — exemples d’appels API.
-- **kivy** — mini-application Kivy.
-- **MobilityMap** — application Flask et carte Leaflet.
-- **agent_writer_essay** — agent d’écriture avec CLI et interface Gradio.
-- **github_project_agent** — agent LangChain pour analyser des projets GitHub.
-- **price_arbitrage_tool** — calculateur d’arbitrage à partir de CSV autorisés.
-- **scraping** — exemples avec BeautifulSoup, Requests et urllib.
-- **scripting** — scripts utilitaires variés.
-- **youtube downloader** — exemple utilisant `pytube` et `ffmpeg`.
-- **peb** — package de calcul simplifié de performance énergétique du bâtiment.
+- **Fondamentaux :** `Algorithme`, `Questionnaire`, `api`, `scripting`.
+- **Data et sciences :** `Python Research`, `Chimie`, `Thermo`, `Dashboard`.
+- **Interfaces et web :** `Chatbot`, `kivy`, `scraping`, `youtube downloader`.
+- **Architecture et réseau :** `ETL`, `Ethical Hacking`.
 
-## Installation
+Ces dossiers sont des supports d'apprentissage. Leurs dépendances et leur niveau
+de finition peuvent varier ; consultez le code du dossier avant exécution.
 
-Il n’existe volontairement pas de fichier global `requirements.txt` : les projets n’utilisent pas tous les mêmes bibliothèques ni les mêmes versions.
+## Expériences archivées
 
-Créez un environnement virtuel dans le dossier du projet concerné :
+Trois anciennes extractions (`agent_writer_essay`, `github_project_agent` et
+`price_arbitrage_tool`) ont été archivées. Elles ne font pas partie de cette
+collection et ne sont plus présentées comme des projets autonomes maintenus.
+Cette mention remplace les anciens liens publics, qui pointaient vers des
+dépôts privés et archivés.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-```
+## Conventions d'organisation
 
-Installez ensuite les dépendances documentées par ce projet. Évitez d’installer toutes les bibliothèques du dépôt dans un seul environnement.
-
-## Vérifications communes
-
-Les contrôles transversaux restent volontairement prudents pour ne pas casser les exemples historiques :
-
-```bash
-python -m pip install ruff pytest
-python -m compileall -q .
-ruff check . --select E9,F63,F7,F82
-pytest
-```
-
-La CI exécute ces commandes sur chaque pull request. Les règles plus strictes doivent être activées progressivement, projet par projet.
-
-## Règles de maintenance
-
-Pour toute nouvelle contribution :
-
-1. Placez le code dans un dossier de projet clairement nommé.
-2. Ajoutez un README local avec l’objectif, le point d’entrée et les dépendances.
-3. Ajoutez au moins un test pour toute logique métier réutilisable.
-4. Ne versionnez pas d’environnement virtuel, de cache, de base locale ni de fichier `.env`.
-5. Préférez un petit module cohérent à plusieurs scripts quasi identiques.
-6. Indiquez explicitement si un projet est actif, expérimental ou archivé.
+- Le statut expérimental ou utilisable doit être indiqué dans le README du
+  projet concerné ; l'absence d'indication signifie expérimental.
+- Les sorties générées (`opportunities*.csv`, caches, builds et environnements
+  virtuels) restent hors de Git.
+- Les fichiers à la racine sont de petits exercices ou leurs résultats
+  pédagogiques ; les nouvelles applications doivent être placées dans un dossier
+  nommé et documenté.
+- Chaque projet doit documenter son point d'entrée et ses dépendances localement.
 
 ## Exécution
 
-Chaque dossier contient généralement un `main.py`, un script principal ou des instructions propres. Exemple :
+Créez un environnement virtuel dans le dossier du projet concerné, puis
+installez ses dépendances :
 
-```bash
-cd dossier
-python fichier.py
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 ```
 
-Pour Django :
+Tous les projets ne possèdent pas encore un fichier `requirements.txt`.
+Reportez-vous au README ou aux imports du dossier sélectionné.
 
-```bash
-python manage.py runserver
-```
+## Vérifications communes
+
+Depuis la racine, exécutez la suite avec `pytest`. Ajoutez un test pour toute nouvelle logique métier réutilisable.
 
 ## Licence
 
-Ce dépôt est fourni à titre pédagogique. Vérifiez également les licences des bibliothèques, données et ressources externes utilisées par chaque sous-projet.
+Sauf mention différente dans un sous-dossier, cette collection est distribuée
+sous licence MIT. Certains jeux de données, documents ou médias peuvent rester
+soumis à leurs propres conditions.

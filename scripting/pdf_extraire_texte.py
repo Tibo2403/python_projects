@@ -1,5 +1,5 @@
 # EXTRAIRE LE TEXTE DES FICHIERS PDF
-from PyPDF2 import PdfFileWriter, PdfFileReader
+from PyPDF2 import PdfFileReader
 
 f = open("recap.pdf", "rb")
 reader = PdfFileReader(f)

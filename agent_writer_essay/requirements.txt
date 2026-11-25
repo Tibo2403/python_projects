@@ -1,7 +1,0 @@
-python-dotenv
-langchain-core
-langchain-openai
-langgraph
-langgraph-checkpoint-sqlite
-tavily-python
-gradio

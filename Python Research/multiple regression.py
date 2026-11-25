@@ -12,7 +12,6 @@ x_2 = 10 * ss.uniform.rvs(size=n)
 y = beta_0 + beta_1 * x_1 + beta_2 * x_2 + ss.norm.rvs(loc=0, scale = 1, size = n)
 X = np.stack([x_1, x_2], axis=1)
 
-from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(X[:,0], X[:,1], y, c=y)

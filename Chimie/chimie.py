@@ -1,12 +1,10 @@
+from math import cos, exp, log, log10, radians, sin
+
+
 #Demande la concentration et affiche le ph
 def pH():
-    c=eval(input("Entrer la concentration : "))
-    print("Le PH est",-log10(c))
-
-#Pour lancer :
-pH()
-
-from math import *
+    c = float(input("Entrer la concentration : "))
+    print("Le PH est", -log10(c))
 
 # Fonction qui donne v_x et v_y en fonction de la norme de v et de l'angle en degré par rapport à  l'horizontale
 def coord_v(norme, angle):
@@ -19,7 +17,7 @@ def convertir_mole(N):
 
 def compo_finale(a,b,c,d,nx,ny):
     x=min(nx/a,ny/b)
-    return nx-a*x,ny-b*y,c*x,d*x
+    return nx-a*x,ny-b*x,c*x,d*x
 
 def etat_eau(t):
     if t<0 :
@@ -55,3 +53,7 @@ def configuration_electronique(n):
             colonne-=1
             ligne+=1
     return reponse[:-1]
+
+
+if __name__ == "__main__":
+    pH()
