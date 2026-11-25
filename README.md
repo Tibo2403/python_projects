@@ -61,6 +61,10 @@ pip install -r requirements.txt
 Tous les projets ne possèdent pas encore un fichier `requirements.txt`.
 Reportez-vous au README ou aux imports du dossier sélectionné.
 
+## Vérifications communes
+
+Depuis la racine, exécutez la suite avec `pytest`. Ajoutez un test pour toute nouvelle logique métier réutilisable.
+
 ## Licence
 
 Sauf mention différente dans un sous-dossier, cette collection est distribuée
